@@ -1,0 +1,34 @@
+{
+  "name": "simple_express_rest_server",
+  "version": "1.0.0",
+  "description": "A Simple Express Server for testing",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/franste/Simple_Express_REST_Server.git"
+  },
+  "keywords": [
+    "Express",
+    "Node.js"
+  ],
+  "author": "Stefan Fransson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/franste/Simple_Express_REST_Server/issues"
+  },
+  "homepage": "https://github.com/franste/Simple_Express_REST_Server#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "http-errors": "^2.0.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

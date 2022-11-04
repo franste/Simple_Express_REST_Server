@@ -28,15 +28,13 @@ app.post('/post', (req, res, next) => {
 app.use('*', (req, res, next) => next(createError(404)))
 
 app.use((err, req, res, next) => {
-    const error = {
-      code: '404',
-      title: 'whoops!',
-      message: '404 - Page Not Found',
-      subMessage: 'We could not find the page that you are looking for. For some reason it has been removed or moved',
-      //img: '/img/404-error.jpg'
-    }
-    return res.status(404).render('errors/error', {error})
-  
+  if (err.status === 404) {
+      const error = `
+        404 - Page Not Found \n
+        The page you are looking for does not exist.
+        `
+      return res.status(404).send(error)
+  }
 })
 
 server.listen(process.env.PORT, () => {
